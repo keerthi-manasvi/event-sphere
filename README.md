@@ -45,12 +45,12 @@ EventSphere enables organizers to create events with relevant details such as ti
 ## Setup Instructions
 To run the project locally, follow the steps below:
 
--git clone https://github.com/keerthi-manasvi/event-sphere.git
--cd event-sphere
--python -m venv env
--source env/bin/activate  # For Windows: env\Scripts\activate
--pip install -r requirements.txt
--python manage.py migrate
--python manage.py runserver
+- git clone https://github.com/keerthi-manasvi/event-sphere.git
+- cd event-sphere
+- python -m venv env
+- source env/bin/activate  # For Windows: env\Scripts\activate
+- pip install -r requirements.txt
+- python manage.py migrate
+- python manage.py runserver
 Once the server is running, access the application at: http://127.0.0.1:8000
 
