@@ -5,7 +5,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: url(https://i.pinimg.com/1200x/81/ab/96/81ab96de430d6938938347ff7497ef67.jpg);
+    background-image: url("{% static 'images/images.jpg' %}");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
