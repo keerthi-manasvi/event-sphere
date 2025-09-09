@@ -2,6 +2,9 @@
 
 **EventSphere** is a comprehensive web-based platform designed to manage and promote cultural, technical, and sports events. It enables organizers to publish events and allows students to browse, register, and provide feedback, all within a secure and user-friendly environment.
 
+## Project Description
+EventSphere enables organizers to create events with relevant details such as title, description, date, and category. Students can view these events, register or unregister, and provide feedback after participation. The platform includes user authentication, categorized event listings, search and filter functionality, and simulated registration confirmation messages.
+
 ## Features
 
 ### Core Functionality
@@ -37,5 +40,17 @@
 - **Frontend**: HTML, CSS, JavaScript  
 - **Backend**: Django (Python)  
 - **Database**: SQLite  
-- **Version Control**: Git and GitHub  
+- **Version Control**: Git and GitHub
+
+## Setup Instructions
+To run the project locally, follow the steps below:
+
+git clone https://github.com/keerthi-manasvi/event-sphere.git
+cd event-sphere
+python -m venv env
+source env/bin/activate  # For Windows: env\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+Once the server is running, access the application at: http://127.0.0.1:8000
 
