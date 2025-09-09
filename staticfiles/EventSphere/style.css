@@ -5,11 +5,21 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    background-image: url("{% static 'images/images.jpg' %}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.mt-3 {
+    color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -36,16 +46,56 @@ h2 {
     margin-left: 0.5rem;
 }
 
+/* === Search Bar === */
+.item1 {
+    width: 500px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    border: solid 2px;
+    margin: 0 auto;
+    margin-top: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 input[type="text"] {
+    width: 50%;
+    padding: 0.5%;
+    margin: 0;
+    font-size: 16px;
+}
+
 /* === Main Content === */
 main.container {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
+/* === Cards (for event listings) === */
+.card {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-img-top {
+    object-fit: cover;
+    aspect-ratio: 2/1;
+}
+
 /* === Buttons === */
 .btn-primary {
     background-color: #0d6efd;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;        
 }
 
 .btn-success {
@@ -63,33 +113,13 @@ main.container {
     color: white;
 }
 
-/* === Cards (for index.html events) === */
-.card {
-    border: 1px solid #dee2e6;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.02);
-}
-
-/* === Footer === */
-footer {
-    background-color: #343a40;
-    color: #ccc;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-/* === Login Page === */
+/* === Forms === */
 form {
     max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
+    margin: 5px auto;
+    padding: 10px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 form h2 {
@@ -97,23 +127,29 @@ form h2 {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .form-control {
+    margin-bottom: 16px;
+    padding: 10px;
     border-radius: 4px;
-    border: 1px solid #ced4da;
-    padding: 0.75rem;
+    border: 1px solid #0f0f10;
     font-size: 1rem;
 }
 
 form .btn {
     width: 100%;
-    padding: 0.75rem;
+    padding: 10px;
     font-weight: bold;
     margin-top: 1rem;
 }
 
+
+
+/* === Message Box === */
 .message-box {
     background-color: #f8d7da;
     color: #842029;
@@ -133,18 +169,26 @@ a:hover {
     text-decoration: underline;
 }
 
+/* === Footer === */
+footer {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 1rem 0;
+    text-align: center;
+}
+
 /* === Responsive === */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+@media (max-width: 576px) {
+    .search {
+        width: 90%;
+        font-size: 14px;
     }
 
     .card {
-        margin-bottom: 1rem;
+        max-width: 100%;
     }
 
     form {
-        margin: 1rem;
-        padding: 1.5rem;
+        width: 90%;
     }
 }
