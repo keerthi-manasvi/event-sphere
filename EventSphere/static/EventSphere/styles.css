@@ -48,19 +48,25 @@ h2 {
     margin-left: 0.5rem;
 }
 
-/* === Search Section === */
+/* === Search Section (corrected) === */
+form {
+    display: flex;               /* flex container */
+    flex-direction: column;      /* stack input + button vertically */
+    align-items: center;         /* horizontal center */
+    justify-content: center;     /* vertical center */
+    min-height: 60vh;            /* vertical centering in viewport */
+    gap: 15px;                   /* spacing between input and button */
+}
+
 .item1 {
     width: 500px;
-    max-width: 90%;
+    max-width: 90%;              /* responsive */
     height: 45px;
     border-radius: 30px;
     border: 2px solid #333;
     padding: 0 15px;
     font-size: 16px;
-    display: block;
     text-align: center;
-    display: block;             
-    margin: 10% auto 0 auto; 
     outline: none;
 }
 
