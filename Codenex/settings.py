@@ -15,9 +15,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 AUTH_USER_MODEL = 'EventSphere.User'
 
 # Security
-SECRET_KEY = 'django-insecure-(pt=-sbf9b-p!12t3l2h@8%5(f(h*q9=7#f$+!@!dn0(++_188'
+SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = False
-ALLOWED_HOSTS = ['eventsphere.onrender.com']
+ALLOWED_HOSTS = ['event-sphere-1-iqxz.onrender.com']
 
 # Applications
 INSTALLED_APPS = [
@@ -67,7 +67,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+        #'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
 }
 
