@@ -1,0 +1,15 @@
+{% extends 'EventSphere/layout.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<h2>Search Results for "{{ query }}"</h2>
+<ul>
+    {% for entry in entries %}
+    <li><a href="{% url 'eventDetails' entry.id %}">{{ entry.title }}</a></li>
+    {% empty %}
+    <li>No matching events found.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}" class="btn btn-primary mt-3" Style="margin-left:20px">Home</a>
+{% endblock %}

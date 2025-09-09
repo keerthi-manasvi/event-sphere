@@ -1,0 +1,55 @@
+{% extends "EventSphere/layout.html" %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block content %}
+
+{% if message %}
+<div class="alert alert-danger text-center">{{ message }}</div>
+{% endif %}
+
+<div class="d-flex justify-content-center mt-5">
+    <div class="glass-card" style="width: 100%; max-width: 400px;">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Leave Feedback</h2>
+
+            <form method="POST" action="{% url 'feedback' event.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="event" value="{{ event.id }}">
+
+                <div class="form-group mb-3">
+                    <input class="form-control" type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group mb-4">
+                    <textarea class="form-control" name="feedback" placeholder="Write your feedback..." rows="4"
+                        required></textarea>
+                </div>
+                <input class="btn btn-success w-100" type="submit" value="Submit Feedback">
+            </form>
+
+            <div class="text-center mt-3">
+                <a href="{% url 'index' %}" class="btn btn-outline-secondary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-4" style="max-width: 600px; margin: 0 auto;">
+    <div class="card-body">
+        <h4 class="text-center mb-4" style="font-weight: 600; color: black;">Previous Feedback</h4>
+        <ul class="list-unstyled">
+            {% for feedback in feedbacks %}
+            <li class="mb-3 p-3 rounded" style="background-color: #f8f9fa">
+                <strong style="color: #333;">@{{ feedback.name }}</strong><br>
+                <span style="color: #333;">{{ feedback.feedback }}</span>
+            </li>
+            {% empty %}
+            <li class="text-muted text-center">No feedback yet. Be the first to share!</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+
+{% endblock %}

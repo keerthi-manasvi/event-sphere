@@ -1,0 +1,11 @@
+{% extends 'EventSphere/layout.html' %}
+
+{% block title %}Error{% endblock %}
+
+{% block content %}
+<div class="message-box">
+    <h2>Error</h2>
+    <p>{{ message }}</p>
+</div>
+<a href="{% url 'index' %}" class="btn btn-primary mt-3" Style="margin-left:20px">Home</a>
+{% endblock %}

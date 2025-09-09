@@ -1,0 +1,200 @@
+/* === Global Styles === */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://i.pinimg.com/1200x/81/ab/96/81ab96de430d6938938347ff7497ef67.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.mt-3 {
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #0d6efd;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #198754;
+}
+
+/* === Navbar === */
+.navbar {
+    padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navbar .btn {
+    margin-left: 0.5rem;
+}
+
+/* === Search Bar === */
+.item1 {
+    width: 500px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    border: solid 2px;
+    margin: 0 auto;
+    margin-top: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 input[type="text"] {
+    width: 50%;
+    padding: 0.5%;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* === Main Content === */
+main.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* === Cards (for event listings) === */
+.card {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-img-top {
+    object-fit: cover;
+    aspect-ratio: 2/1;
+}
+
+/* === Buttons === */
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-success {
+    background-color: #198754;
+    border: none;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* === Forms === */
+form {
+    max-width: 400px;
+    margin: 5px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+form h2 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-control {
+    margin-bottom: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #0f0f10;
+    font-size: 1rem;
+}
+
+form .btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.glass-card {
+    background: rgba(101, 93, 93, 0.1);
+    backdrop-filter: blur(0.5px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #8d8888;
+}
+
+/* === Message Box === */
+.message-box {
+    background-color: #f8d7da;
+    color: #842029;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* === Links === */
+a {
+    color: #198754;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* === Responsive === */
+@media (max-width: 576px) {
+    .search {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+}
