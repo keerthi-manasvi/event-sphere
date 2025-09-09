@@ -24,12 +24,12 @@ h2 {
 
 h1 {
     font-size: 2.5rem;
-    color: #0d6efd;
+    color: black;
 }
 
 h2 {
     font-size: 2rem;
-    color: #198754;
+    color: black;
 }
 
 /* === Navbar === */
@@ -119,7 +119,6 @@ form {
     padding: 10px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 form h2 {
@@ -147,13 +146,7 @@ form .btn {
     margin-top: 1rem;
 }
 
-.glass-card {
-    background: rgba(101, 93, 93, 0.1);
-    backdrop-filter: blur(0.5px);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #8d8888;
-}
+
 
 /* === Message Box === */
 .message-box {
