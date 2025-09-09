@@ -5,21 +5,19 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    height: 100vh;
     background-image: url("{% static 'images/images.jpg' %}");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
+    background-attachment: fixed;
 }
 
+/* === Headings === */
 h1,
 h2 {
     text-align: center;
     margin-bottom: 1rem;
-}
-
-.mt-3 {
-    color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -30,6 +28,10 @@ h1 {
 h2 {
     font-size: 2rem;
     color: black;
+}
+
+.mt-3 {
+    color: #fff;
 }
 
 /* === Navbar === */
@@ -46,24 +48,37 @@ h2 {
     margin-left: 0.5rem;
 }
 
-/* === Search Bar === */
+/* === Search Section === */
 .item1 {
     width: 500px;
-    height: 30px;
+    max-width: 90%;
+    height: 45px;
     border-radius: 30px;
-    display: flex;
-    border: solid 2px;
+    border: 2px solid #333;
     margin: 0 auto;
-    margin-top: 20%;
-    justify-content: center;
-    align-items: center;
+    margin-top: 10%;
+    padding: 0 15px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
 }
 
-.item1 input[type="text"] {
-    width: 50%;
-    padding: 0.5%;
-    margin: 0;
-    font-size: 16px;
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.button-container input[type="submit"],
+.button-container a,
+.button-container button {
+    width: auto !important;
+    min-width: unset !important;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* === Main Content === */
@@ -92,19 +107,19 @@ main.container {
 .btn-primary {
     background-color: #0d6efd;
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 6px 16px;
 }
 
 .btn-success {
     background-color: #198754;
     border: none;
+    padding: 6px 16px;
 }
 
 .btn-outline-secondary {
     border-color: #6c757d;
     color: #6c757d;
+    padding: 6px 16px;
 }
 
 .btn-outline-secondary:hover {
@@ -146,8 +161,6 @@ form .btn {
     margin-top: 1rem;
 }
 
-
-
 /* === Message Box === */
 .message-box {
     background-color: #f8d7da;
@@ -178,9 +191,14 @@ footer {
 
 /* === Responsive === */
 @media (max-width: 576px) {
-    .search {
+    .item1 {
         width: 90%;
         font-size: 14px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .card {
