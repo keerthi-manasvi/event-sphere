@@ -5,8 +5,8 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: url("{% static 'images/images.jpg' %}");
-    background-size: contain;
+    background-image: url("{% static 'images/image.jpg' %}");
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -18,10 +18,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.mt-3 {
-    color: rgb(255, 255, 255);
-}
-
 h1 {
     font-size: 2.5rem;
     color: black;
@@ -30,6 +26,10 @@ h1 {
 h2 {
     font-size: 2rem;
     color: black;
+}
+
+.mt-3 {
+    color: white;
 }
 
 /* === Navbar === */
@@ -46,24 +46,29 @@ h2 {
     margin-left: 0.5rem;
 }
 
-/* === Search Bar === */
-.item1 {
-    width: 500px;
-    height: 30px;
-    border-radius: 30px;
+/* === Search Section === */
+form {
     display: flex;
-    border: solid 2px;
-    margin: 0 auto;
-    margin-top: 20%;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    margin-top: 8%;
 }
 
-.item1 input[type="text"] {
-    width: 50%;
-    padding: 0.5%;
-    margin: 0;
+.item1 {
+    width: 500px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid #333;
+    padding: 0 15px;
     font-size: 16px;
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 /* === Main Content === */
@@ -89,18 +94,28 @@ main.container {
 }
 
 /* === Buttons === */
+.btn {
+    display: inline-block;
+    width: auto !important; /* override 100% width */
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Variants */
 .btn-primary {
     background-color: #0d6efd;
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;        
+    color: white;
 }
 
 .btn-success {
     background-color: #198754;
     border: none;
+    color: white;
 }
 
 .btn-outline-secondary {
@@ -113,41 +128,34 @@ main.container {
     color: white;
 }
 
-/* === Forms === */
-form {
+/* === Forms (login/signup) === */
+form.auth-form {
     max-width: 400px;
-    margin: 5px auto;
-    padding: 10px;
+    margin: 2rem auto;
+    padding: 2rem;
     background-color: #ffffff;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-form h2 {
+form.auth-form h2 {
     margin-bottom: 1.5rem;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    margin-bottom: 1rem;
 }
 
 .form-control {
-    margin-bottom: 16px;
-    padding: 10px;
     border-radius: 4px;
-    border: 1px solid #0f0f10;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
     font-size: 1rem;
 }
 
-form .btn {
-    width: 100%;
-    padding: 10px;
-    font-weight: bold;
+form.auth-form .btn {
     margin-top: 1rem;
 }
-
-
 
 /* === Message Box === */
 .message-box {
@@ -178,17 +186,21 @@ footer {
 }
 
 /* === Responsive === */
-@media (max-width: 576px) {
-    .search {
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .item1 {
         width: 90%;
-        font-size: 14px;
     }
 
     .card {
-        max-width: 100%;
+        margin-bottom: 1rem;
     }
 
-    form {
-        width: 90%;
+    form.auth-form {
+        margin: 1rem;
+        padding: 1.5rem;
     }
 }
