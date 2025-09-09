@@ -16,12 +16,16 @@ AUTH_USER_MODEL = 'EventSphere.User'
 # Security
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = False
-ALLOWED_HOSTS = ['event-sphere-1-iqxz.onrender.com']
 
-# CSRF protection for Render
-CSRF_TRUSTED_ORIGINS = ['https://event-sphere-1-iqxz.onrender.com']
+ALLOWED_HOSTS = [
+    'event-sphere-1-iqxz.onrender.com',
+    '.onrender.com',  # Accepts all Render subdomains
+]
 
-# Recognize HTTPS behind Render proxy
+CSRF_TRUSTED_ORIGINS = [
+    'https://event-sphere-1-iqxz.onrender.com',
+]
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Applications
@@ -39,7 +43,7 @@ INSTALLED_APPS = [
 # Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Serve static files
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Enables static file serving
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -101,7 +105,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Default primary key field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Logging (optional but helpful)
+# Logging (for production visibility)
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
