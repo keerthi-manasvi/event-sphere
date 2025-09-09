@@ -7,14 +7,6 @@
     <div class="text-center">
         <h1 class="mb-4" style="margin-top: 150px; font-size: 5rem; color: black">WELCOME TO EVENTSPHERE</h1>
     </div>
-
-    <form>
-        <input class="item1" type="text" name="title">
-        <div class="button-container">
-            <input formaction="{% url 'search' %}" type="submit" value="Search Events">
-        </div>
-    </form>
-
     <style>
         .item1 {
             width: 500px;
@@ -23,7 +15,7 @@
             display: flex;
             border: solid 2px;
             margin: 0 auto;
-            margin-top: 10%;
+            margin-top: 20px;
             justify-content: center;
             align-items: center;
         }
@@ -35,6 +27,12 @@
             margin-top: 10px;
         }
     </style>
+    <form>
+        <input class="item1" type="text" name="title">
+        <div class="button-container">
+            <input formaction="{% url 'search' %}" type="submit" value="Search Events">
+        </div>
+    </form>
 
     <hr class="my-5">
 
