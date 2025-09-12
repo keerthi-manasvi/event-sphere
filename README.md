@@ -53,4 +53,6 @@ To run the project locally, follow the steps below:
 - python manage.py migrate
 - python manage.py runserver
 Once the server is running, access the application at: http://127.0.0.1:8000
-
+## Live Deployment
+You can access the deployed version of EventSphere at: 
+https://event-sphere-1-iqxz.onrender.com
